@@ -1,0 +1,425 @@
+{
+	"info": {
+		"_postman_id": "d95282b0-7fe4-40fc-9a9e-8ce4dd77b595",
+		"name": "RestaurantReviews",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get Restaurants",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:51044/api/restaurants",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "51044",
+					"path": [
+						"api",
+						"restaurants"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get A Restaurant",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true,
+					"accept-encoding": true
+				}
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:51044/api/restaurants/d28888e9-2ba9-473a-a40f-e38cb54f9b35",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "51044",
+					"path": [
+						"api",
+						"restaurants",
+						"d28888e9-2ba9-473a-a40f-e38cb54f9b35"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get A Restaurants Ratings",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:51044/api/restaurants/da2fd609-d754-4feb-8acd-c4f9ff13ba96/ratings",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "51044",
+					"path": [
+						"api",
+						"restaurants",
+						"da2fd609-d754-4feb-8acd-c4f9ff13ba96",
+						"ratings"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get A Restaurants Specific Rating",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:51044/api/restaurants/d28888e9-2ba9-473a-a40f-e38cb54f9b35/ratings/5b1c2b4d-48c7-402a-80c3-cc796ad49c6b",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "51044",
+					"path": [
+						"api",
+						"restaurants",
+						"d28888e9-2ba9-473a-a40f-e38cb54f9b35",
+						"ratings",
+						"5b1c2b4d-48c7-402a-80c3-cc796ad49c6b"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST Restaurant",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true,
+					"accept-encoding": true,
+					"content-type": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Name\" : \"The Wok\",\r\n    \"Address\" : \"234 Chop Suey Way\",\r\n    \"Description\" : \"Chinese\",\r\n    \"Hours\" : \"M, T, Wed 9AM - 3PM\",\r\n    \"AverageRating\" : 0\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:51044/api/restaurants",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "51044",
+					"path": [
+						"api",
+						"restaurants"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST Rating for Restaurant",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true,
+					"accept-encoding": true,
+					"content-type": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Rank\" : 2\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:51044/api/restaurants/da2fd609-d754-4feb-8acd-c4f9ff13ba96/ratings/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "51044",
+					"path": [
+						"api",
+						"restaurants",
+						"da2fd609-d754-4feb-8acd-c4f9ff13ba96",
+						"ratings",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT Rating for A Restaurant",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true,
+					"content-type": true
+				}
+			},
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Rank\" : 5\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:51044/api/restaurants/da2fd609-d754-4feb-8acd-c4f9ff13ba96/ratings/f63385c4-0dff-4b96-b73a-0d27f4e3599b",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "51044",
+					"path": [
+						"api",
+						"restaurants",
+						"da2fd609-d754-4feb-8acd-c4f9ff13ba96",
+						"ratings",
+						"f63385c4-0dff-4b96-b73a-0d27f4e3599b"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PATCH A Restaurant OP Replace Name",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true,
+					"accept-encoding": true
+				}
+			},
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json-patch+json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n    {\r\n        \"op\": \"replace\",\r\n        \"path\": \"/name\",\r\n        \"value\": \"Taco Crunchers - North\"\r\n    }\r\n]"
+				},
+				"url": {
+					"raw": "http://localhost:51044/api/restaurants/da2fd609-d754-4feb-8acd-c4f9ff13ba96",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "51044",
+					"path": [
+						"api",
+						"restaurants",
+						"da2fd609-d754-4feb-8acd-c4f9ff13ba96"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PATCH A Restaurant OP Remove Name - Validation Test",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true,
+					"accept-encoding": true
+				}
+			},
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json-patch+json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n    {\r\n        \"op\": \"remove\",\r\n        \"path\": \"/name\"\r\n    }\r\n]"
+				},
+				"url": {
+					"raw": "http://localhost:51044/api/restaurants/da2fd609-d754-4feb-8acd-c4f9ff13ba96",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "51044",
+					"path": [
+						"api",
+						"restaurants",
+						"da2fd609-d754-4feb-8acd-c4f9ff13ba96"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "OPTION Restaurants Options",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "OPTIONS",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:51044/api/restaurants",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "51044",
+					"path": [
+						"api",
+						"restaurants"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": " DELETE Rating For A Restaurant",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:51044/api/restaurants/da2fd609-d754-4feb-8acd-c4f9ff13ba96/ratings/40ff5488-fdab-45b5-bc3a-14302d59869a",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "51044",
+					"path": [
+						"api",
+						"restaurants",
+						"da2fd609-d754-4feb-8acd-c4f9ff13ba96",
+						"ratings",
+						"40ff5488-fdab-45b5-bc3a-14302d59869a"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": " DELETE A Restaurant",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:51044/api/restaurants/da2fd609-d754-4feb-8acd-c4f9ff13ba96/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "51044",
+					"path": [
+						"api",
+						"restaurants",
+						"da2fd609-d754-4feb-8acd-c4f9ff13ba96",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
